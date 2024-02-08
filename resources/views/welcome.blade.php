@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('countdown/asset/css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                zapplerepair@gmail.com
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                0877-8885-5868
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="asset/img/zapplerepairLogo.png" alt="Logo" width="200" height="24"
+                    class="d-inline-block align-text-top" />
+            </a>
+        </div>
+    </nav>
+
+    <!-- card coba -->
+    <div class="content">
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card" id="promoCard">
+                        <h4>Promo Minggu Ini</h4>
+                        <img src="asset/img/images (1).jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <div class="countdown" id="countdown-timer"></div>
+
+                            <div id="promo-timing-info">
+                                <p>Waktu Mulai: <span id="promo-start-time"></span></p>
+                                <p>Waktu Berakhir: <span id="promo-end-time"></span></p>
+                            </div>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <p class="link" id="tiktokLink">"link tiktok"</p>
+                            <button id="promoButtonRegister" class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#registerModal" style="display: none">Reminder Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal untuk Register -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="registerInputNama" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="registerInputNama" name="name" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerInputNomorHP" class="form-label">Nomor HP</label>
+                                <input type="tel" class="form-control" id="registerInputNomorHP" name="wanumber"
+                                    required />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h6>Tentang Kami</h6>
+                        <p>
+                            Di Zapplerepair, kami mengkhususkan diri dalam memperbaiki
+                            perangkat Apple dan Windows, seperti kerusakan logicboard macbook,
+                            penggantian battery macbook / surface, layar lcd surface bergetar
+                            dan lainnya. Kami menyediakan beragam sparepart yang lengkap dan
+                            didukung oleh tenaga ahli yang profesional. Di samping itu kami
+                            memiliki pengalaman bertahun-tahun dalam perbaikan IT, yang
+                            menjadikan kami sebagai tempat service Apple dan Windows Surface
+                            terbaik di Indonesia dengan harga yang optimal dan pelayanan serta
+                            fasilitas yang berkualitas.
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6>Informasi</h6>
+                        <p>Service Apple Mac</p>
+                        <p>Service Windows Surface</p>
+                        <p>Service di Tempat</p>
+                        <p>Pemulihan Data Apple dan Surface</p>
+                        <p>Sparepart Apple Mac dan Surface</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6>Sosial Media</h6>
+                        <a class="nav-link mt-2" href="#">
+                            <ion-icon name="logo-instagram"></ion-icon> Instagram
+                        </a>
+                        <a class="nav-link mt-2" href="#">
+                            <ion-icon name="logo-twitter"></ion-icon> Twitter
+                        </a>
+                        <a class="nav-link mt-2" href="#">
+                            <ion-icon name="logo-facebook"></ion-icon> Facebook
+                        </a>
+                        <a href="" class="nav-link mt-2">
+                            <ion-icon name="logo-linkedin"></ion-icon> Linkedin
+                        </a>
+                    </div>
+                </div>
+
+                <h6 class="text-center pt-3">Copyright ©2023 Zapplerepair Indonesia</h6>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script>
+        function formatWIB(date) {
+            return new Intl.DateTimeFormat("id-ID", {
+                timeZone: "Asia/Jakarta",
+                hour12: false,
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric",
+            }).format(date);
+        }
+
+        const promoStartDate = new Date("2023-11-29T11:57:30");
+        const promoEndDate = new Date("2023-11-29T11:59:59");
+
+        function formatTimeDifference(timeDifference) {
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+                (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+                (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            return `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+        }
+
+        function updateCountdown(elementId, startDate, endDate, promoCardId, tiktokLinkId) {
+            const now = new Date();
+            const promoCard = document.getElementById(promoCardId);
+            const tiktokLink = document.getElementById(tiktokLinkId);
+            const promoButtonRegister = document.getElementById("promoButtonRegister");
+
+            if (now < startDate) {
+                const timeDifference = startDate - now;
+                document.getElementById(elementId).innerHTML =
+                    "Promo Mulai Dalam: " + formatTimeDifference(timeDifference);
+
+                // Sembunyikan link TikTok dan tampilkan button register
+                tiktokLink.style.display = "none";
+                promoButtonRegister.style.display = "block";
+            } else if (now < endDate) {
+                const timeDifference = endDate - now;
+                document.getElementById(elementId).innerHTML =
+                    "Promo Berakhir Dalam: " + formatTimeDifference(timeDifference);
+
+                // Tampilkan link TikTok dan sembunyikan button register
+                tiktokLink.style.display = "block";
+                promoButtonRegister.style.display = "none";
+
+                promoCard.classList.add("active");
+            } else {
+                document.getElementById(elementId).innerHTML = "Promo Telah Berakhir";
+
+                // Sembunyikan link TikTok dan button register
+                tiktokLink.style.display = "none";
+                promoButtonRegister.style.display = "none";
+
+                promoCard.classList.remove("active");
+            }
+        }
+
+        function checkPromoStatus() {
+            updateCountdown("countdown-timer", promoStartDate, promoEndDate, "promoCard", "tiktokLink");
+
+            if (promoEndDate - new Date() <= 0) {
+                document.querySelector(".card").classList.remove("active");
+            }
+        }
+
+        setInterval(checkPromoStatus, 1000);
+
+        document.getElementById("promo-start-time").textContent = formatWIB(promoStartDate);
+        document.getElementById("promo-end-time").textContent = formatWIB(promoEndDate);
+        </script>
+<script>document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const registerNama = document.getElementById("registerInputNama").value;
+    const registerNomorHP = document.getElementById("registerInputNomorHP").value;
+
+    // Kirim data ke controller menggunakan AJAX
+    $.ajax({
+        url: "{{ route('register.store') }}",
+        type: "POST",
+        data: {
+            "_token": "{{ csrf_token() }}",
+            "name": registerNama,
+            "wanumber": registerNomorHP,
+        },
+        success: function (response) {
+            console.log(response.message);
+            // Tambahkan logika lainnya sesuai kebutuhan Anda
+            // Misalnya, tampilkan pesan konfirmasi
+            // Tutup modal setelah submit
+            $("#registerModal").modal("hide");
+        },
+        error: function (error) {
+            console.error(error);
+            // Tambahkan logika lainnya sesuai kebutuhan Anda
+            // Misalnya, tampilkan pesan error
+        }
+    });
+});
+</script>
+</body>
+
+</html>
